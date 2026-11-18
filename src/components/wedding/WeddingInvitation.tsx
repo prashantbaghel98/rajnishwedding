@@ -159,7 +159,7 @@ function Gallery() {
         className="aspect-video w-full  object-contain"
       >
         <source
-          src={wedding.video.src}
+          src="#"
           type="video/mp4"
         />
         Your browser does not support video playback.
