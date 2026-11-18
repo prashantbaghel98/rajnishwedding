@@ -7,7 +7,7 @@ import sangeetImage from '@/assets/wedding-sangeet.png';
 import mehdiImage from '@/assets/wedding-mehdi.png';
 import mandapImage from '@/assets/wedding-mandap.png';
 import weddingImage from '@/assets/wedding-wedding.png';
-import weddingVideo from "@/assets/teaser.mp4";
+// import weddingVideo from "@/assets/teaser.mp4";
 import videoPoster from "@/assets/wedding-mandap.png";
 
 export type WeddingEvent = {
@@ -92,7 +92,7 @@ export const wedding = {
     note: "Your presence and blessings are the greatest gift for us.",
   },
   video: {
-    src: weddingVideo,
+    src: "https://www.worldtricks4u.com/wp-content/uploads/teaser.mp4",
     poster: videoPoster,
     title: "Our Engagement Film",
     description: "Two hearts, one promise, a lifetime of togetherness.",
