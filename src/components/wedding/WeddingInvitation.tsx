@@ -30,7 +30,7 @@ function Ornament() {
 }
 
 function SectionTitle({ eyebrow, title, copy }: { eyebrow: string; title: string; copy?: string }) {
-  return <Reveal className="mx-auto mb-10 max-w-2xl text-center sm:mb-14"><p className="eyebrow">{eyebrow}</p><h2 className="section-title">{title}</h2><Ornament />{copy && <p className="mt-5 text-sm leading-7 text-muted-foreground sm:text-base">{copy}</p>}</Reveal>;
+  return <Reveal className="mx-auto mb-10 max-w-2xl text-center sm:mb-14"><p className="eyebrow">{eyebrow}</p><h2 className="section-title">{title}</h2><Ornament />{copy && <p className="mt-5 !text-amber-0 text-sm leading-7 text-muted-foreground sm:text-base">{copy}</p>}</Reveal>;
 }
 
 function Countdown() {
@@ -124,7 +124,7 @@ function Events() {
 function Detail({ icon, label, value }: { icon: React.ReactNode; label: string; value: string }) { return <div className="flex gap-3 [&_svg]:mt-0.5 [&_svg]:size-4 [&_svg]:shrink-0 [&_svg]:text-gold"><div>{icon}</div><div><p className="text-[10px] uppercase tracking-[.18em] text-muted-foreground">{label}</p><p className="mt-1 text-sm font-semibold">{value}</p></div></div>; }
 
 function Families() {
-  return <section id="family" className="section-wrap bg-primary text-primary-foreground"><SectionTitle eyebrow="With joyful hearts" title="Our families" copy="Two families, many traditions, and a whole lot of love come together." /><div className="mx-auto grid max-w-5xl gap-px bg-gold/25 md:grid-cols-2">{([wedding.families.bride, wedding.families.groom] as const).map((family, index) => <Reveal key={index} className="bg-primary p-8 text-center sm:p-12"><Users className="mx-auto size-7 text-gold-soft" /><p className="eyebrow mt-5 text-gold-soft">{index ? wedding.familyNames.groom : wedding.familyNames.bride}</p><div className="mt-7 space-y-4">{family.map(member => <p key={member} className="font-display text-xl">{member}</p>)}</div></Reveal>)}</div></section>;
+  return <section id="family" className="section-wrap bg-primary text-primary-foreground "><SectionTitle eyebrow="With joyful hearts" title="Our families" copy="Two families, many traditions, and a whole lot of love come together." /><div className="mx-auto grid max-w-5xl gap-px bg-gold/25 md:grid-cols-2">{([wedding.families.bride, wedding.families.groom] as const).map((family, index) => <Reveal key={index} className="bg-primary p-8 text-center sm:p-12"><Users className="mx-auto size-7 text-gold-soft" /><p className="eyebrow mt-5 text-gold-soft">{index ? wedding.familyNames.groom : wedding.familyNames.bride}</p><div className="mt-7 space-y-4">{family.map(member => <p key={member} className="font-display text-xl">{member}</p>)}</div></Reveal>)}</div></section>;
 }
 
 function Gallery() {
